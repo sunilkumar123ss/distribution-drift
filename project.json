@@ -1,0 +1,11 @@
+{
+  "slug": "distribution-drift",
+  "title": "Distribution drift diagnostics",
+  "description": "Compare numeric samples using fixed-bin population stability index, empirical Kolmogorov-Smirnov distance and standardized mean shift.",
+  "category": "evaluation",
+  "demo_args": [
+    "--input",
+    "example.json"
+  ],
+  "expected_exit": 0
+}
