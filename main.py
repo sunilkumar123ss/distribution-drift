@@ -41,3 +41,24 @@ def evaluate(baseline, current, edges, smoothing=0.5):
             "mean_shift_baseline_std": (statistics.mean(current) - statistics.mean(baseline)) / stdev if stdev else None,
             "smoothing_pseudocount": smoothing}
 
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--input", required=True)
+    args = parser.parse_args()
+    try:
+        input_path = Path(args.input)
+        if not input_path.is_absolute():
+            input_path = Path(__file__).resolve().parent / input_path
+        with input_path.open(encoding="utf-8") as handle:
+            data = json.load(handle)
+        print(json.dumps(evaluate(data["baseline"], data["current"], data["edges"], data.get("smoothing", 0.5)),
+                         indent=2, allow_nan=False))
+        return 0
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        print(f"Invalid drift data: {error}", file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main())
