@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 5 of 11. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 6 of 11. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -17,7 +17,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 3 | 2024-02-13T15:24:32+05:30 | Implement finite list (present) |
 | 4 | 2024-05-19T10:27:34+05:30 | Implement evaluate (present) |
 | 5 | 2024-06-04T16:48:31+05:30 | Expose the command-line demonstration and input handling (present) |
-| 6 | 2025-08-17T09:54:38+05:30 | Test identical distribution (later stage) |
+| 6 | 2025-08-17T09:54:38+05:30 | Test identical distribution (present) |
 | 7 | 2025-10-02T16:00:57+05:30 | Test disjoint and constant (later stage) |
 | 8 | 2026-01-21T14:46:46+05:30 | Test invalid edges and values (later stage) |
 | 9 | 2026-02-17T13:52:35+05:30 | Add one-command test, demonstration and CLI verification (later stage) |
