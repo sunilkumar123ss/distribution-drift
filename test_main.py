@@ -9,3 +9,9 @@ class DriftTests(unittest.TestCase):
         self.assertEqual(result["ks_distance"], 0)
         self.assertEqual(result["baseline_counts"], [1, 1, 2])
 
+    def test_disjoint_and_constant(self):
+        result = evaluate([0, 0], [10, 10], [1, 5])
+        self.assertEqual(result["ks_distance"], 1)
+        self.assertGreater(result["smoothed_psi"], 0)
+        self.assertIsNone(result["mean_shift_baseline_std"])
+
