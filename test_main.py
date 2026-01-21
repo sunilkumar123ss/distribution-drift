@@ -15,3 +15,12 @@ class DriftTests(unittest.TestCase):
         self.assertGreater(result["smoothed_psi"], 0)
         self.assertIsNone(result["mean_shift_baseline_std"])
 
+    def test_invalid_edges_and_values(self):
+        for base, edges, smoothing in [([1], [2], 0.5), ([1, 2], [2, 2], 0.5),
+                                       ([1, float("inf")], [2], 0.5), ([1, 2], [2], 0)]:
+            with self.subTest(base=base), self.assertRaises(ValueError):
+                evaluate(base, [1, 2], edges, smoothing)
+
+
+if __name__ == "__main__":
+    unittest.main()
