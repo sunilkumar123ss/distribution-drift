@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 9 of 11. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 10 of 11. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -21,5 +21,5 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 7 | 2025-10-02T16:00:57+05:30 | Test disjoint and constant (present) |
 | 8 | 2026-01-21T14:46:46+05:30 | Test invalid edges and values (present) |
 | 9 | 2026-02-17T13:52:35+05:30 | Add one-command test, demonstration and CLI verification (present) |
-| 10 | 2026-07-08T17:35:25+05:30 | Run verification on the supported Python CI matrix (later stage) |
+| 10 | 2026-07-08T17:35:25+05:30 | Run verification on the supported Python CI matrix (present) |
 | 11 | 2026-09-01T13:03:51+05:30 | Document usage, limitations and the disclosed reconstructed timeline (later stage) |
