@@ -1,11 +1,24 @@
 # Distribution drift diagnostics
 
-> **Disclosed reconstruction prepared on 24 October 2026.** The recorded Git dates are synthetic, not dates of past development. See [HISTORY.md](HISTORY.md).
+Compare two numeric samples using fixed-bin population stability index (PSI), empirical two-sample Kolmogorov–Smirnov distance, and a mean shift measured in baseline population standard deviations. All fixture values are synthetic.
 
-This is an incomplete stage in a tutorial reconstruction of an already-completed reference implementation. Source, fixtures, tests, command-line behavior and verification are introduced in later stages. Only the final branch tip contains the complete documented package.
+~~~sh
+python3 main.py --input example.json
+python3 -m unittest -v
+~~~
 
-## Intended scope of the final example
+Bin edges are supplied explicitly so both samples use the same partition. Bins are left-inclusive; implicit unbounded tail bins prevent lost observations. PSI uses a configurable positive pseudocount in every bin to avoid zero division. KS is the largest absolute empirical CDF gap, not a p-value. A constant baseline yields null standardized mean shift.
 
-Compare numeric samples using fixed-bin population stability index, empirical Kolmogorov-Smirnov distance and standardized mean shift.
+This is a descriptive check, not an automated statistical significance test or drift diagnosis. Edge selection and smoothing affect PSI; no universal alert threshold is claimed.
 
-All examples are synthetic and educational. This reconstruction does not establish historical employment, deployment, usage, or production benchmarks.
+## Scope
+
+This is an educational implementation with synthetic fixtures. Run the tests and inspect the documented limits before adapting it.
+
+## Repository checks
+
+```sh
+python3 verify.py
+```
+
+This runs the isolated test suite, synthetic example, and CLI help. The included GitHub Actions workflow repeats these checks when the repository is published. No hosted CI result is claimed by the local verification report.
